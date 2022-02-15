@@ -10,6 +10,33 @@ Add a JSON file in your project root called `localization.json`. Follow the form
 }
 ```
 
+This source generator relies on `AdditionalFiles`, so you'll need to add the following item group to your csproj
+
+**Method 1**
+
+If using Rider
+
+- Right click file --> Properties
+- Change build action to `AdditionalFiles`
+
+**Method 2**
+
+If using Visual Studio XXXX
+
+- Click on file
+- View the item properties panel and change build action to `AdditionalFiles`
+
+**Method 3**
+
+Manually add the following group to your csproj
+
+```xml
+<ItemGroup>
+  <None Remove="localization.json" />
+  <AdditionalFiles Include="localization.json"/>
+</ItemGroup>
+```
+
 At build - a couple things are generated for you.
 
 - Referencing the key values as strings can lead to typos and forces a developer to jump between files to know what's there. To combat this, keys are grouped under
