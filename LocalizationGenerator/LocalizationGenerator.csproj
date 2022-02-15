@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        
+        <!--Generate package at build-->
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        
+        <!--Don't include generator as lib dependency-->
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <Authors>JBraunsmaJr</Authors>
+        <Description>Source-Generator backed localization efforts</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!--Package the generator in the analyzer directory of the nuget package-->
+        <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.0.1" />
+        <PackageReference Include="System.Text.Json" Version="6.0.1" />
+    </ItemGroup>
+</Project>
