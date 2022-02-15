@@ -14,6 +14,7 @@
         <PackageProjectUrl>https://github.com/JBraunsmaJr/LocalizationProject</PackageProjectUrl>
         <RepositoryUrl>https://github.com/JBraunsmaJr/LocalizationProject</RepositoryUrl>
         <PackageTags>Localization, Localizer, Source Generator</PackageTags>
+        <PackageVersion>1.0.02</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>

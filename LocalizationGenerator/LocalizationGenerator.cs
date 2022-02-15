@@ -25,11 +25,17 @@ namespace %NAMESPACE%;
 using System.Collections.Generic;
 using System.Linq;
 
+///<summary>
+/// Strongly typed approach to referencing key values in <c>localization.json</c>
+///</summary>
 public enum LocalizationResource
 {
     %ENUMS%
 }
 
+///<summary>
+/// Languages discovered in <c>localization.json</c>
+///</summary>
 public enum LocalizationLanguage
 {
     %LANGS%
@@ -39,7 +45,7 @@ public static class Localizer
 {
     private static Dictionary<LocalizationLanguage, string> _supportedLanguages = new Dictionary<LocalizationLanguage, string>()
     {
-%SUPPORTED_LANGAUGES%
+%SUPPORTED_LANGUAGES%
     };
 
     private static Dictionary<LocalizationResource, Dictionary<string, string>> _resources =
@@ -48,8 +54,14 @@ public static class Localizer
 %ENTRIES%
         };
     
+    ///<summary>
+    /// List of languages supported / found in <c>localization.json</c>
+    ///</summary>
     public static List<string> SupportedLanguages => _supportedLanguages.Values.ToList();
 
+    ///<summary>
+    /// Translate <paramref name=""resource""/> into <paramref name=""language""/>
+    ///</summary>
     public static string Get(LocalizationResource resource, string language)
     {
         if(!_resources.ContainsKey(resource) || !_resources[resource].ContainsKey(language))
@@ -58,6 +70,9 @@ public static class Localizer
         return _resources[resource][language];
     }
 
+    ///<summary>
+    /// Translate <paramref name=""resource""/> into <paramref name=""language""/>
+    ///</summary>
     public static string Get(LocalizationResource resource, LocalizationLanguage language)
     {
         if(!_resources.ContainsKey(resource) || _supportedLanguages.ContainsKey(language))
@@ -66,6 +81,18 @@ public static class Localizer
         return _resources[resource][_supportedLanguages[language]];
     }
 
+    ///<summary>
+    /// Get translation based on current culture
+    ///</summary>
+    public static string Get(LocalizationResource resource)
+    {
+        string lang = System.Globalization.CultureInfo.CurrentCulture.Name;
+        return Get(resource, lang);
+    }
+    
+    ///<summary>
+    /// Translate <paramref name=""resource""/> using provided culture <paramref name=""info""/>
+    ///</summary>
     public static string Get(LocalizationResource resource, System.Globalization.CultureInfo info)
     {
         return Get(resource, info.Name);
@@ -169,8 +196,16 @@ public static class Localizer
                 .Replace(ENTRIES, string.Join($"{_entryStartTab},\n", entries))
                 .Replace(SUPPORTED_LANGUAGES, string.Join($"{_entryStartTab},\n", languageDictionary))
                 .Replace(LANGUAGE_ENUMS, string.Join($",\n{_enumStart}", languageEnums));
-            
-            context.AddSource($"Localizer_generated.cs", templateContents);
+
+
+            try
+            {
+                context.AddSource($"Localizer_generated.cs", templateContents);
+            }
+            catch (Exception ex)
+            {
+                ReportError($"{ex.Message},\n\n{templateContents}");
+            }
         }
     }
 }
