@@ -1,8 +1,10 @@
-﻿# How to Install
+﻿# Install
 
+```
 Install-Package LocalizationGenerator
+```
 
-# How to Use
+# Setup
 
 Add a JSON file in your project root called `localization.json`. Follow the format below.
 ```json
@@ -41,6 +43,7 @@ Manually add the following group to your csproj
 </ItemGroup>
 ```
 
+# How to use
 At build - a couple things are generated for you.
 
 - Referencing the key values as strings can lead to typos and forces a developer to jump between files to know what's there. To combat this, keys are grouped under
