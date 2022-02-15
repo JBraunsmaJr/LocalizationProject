@@ -10,6 +10,10 @@
         <IncludeBuildOutput>false</IncludeBuildOutput>
         <Authors>JBraunsmaJr</Authors>
         <Description>Source-Generator backed localization efforts</Description>
+        <Title>Localizer</Title>
+        <PackageProjectUrl>https://github.com/JBraunsmaJr/LocalizationProject</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/JBraunsmaJr/LocalizationProject</RepositoryUrl>
+        <PackageTags>Localization, Localizer, Source Generator</PackageTags>
     </PropertyGroup>
 
     <ItemGroup>
