@@ -16,7 +16,7 @@ Add a JSON file in your project root called `localization.json`. Follow the form
 }
 ```
 
-This source generator relies on `AdditionalFiles`, so you'll need to add the following item group to your csproj
+This source generator relies on `AdditionalFiles`, use one of the 3 methods below to complete setup.
 
 **Method 1**
 
