@@ -1,4 +1,8 @@
-﻿# How to Use
+﻿# How to Install
+
+Install-Package LocalizationGenerator
+
+# How to Use
 
 Add a JSON file in your project root called `localization.json`. Follow the format below.
 ```json
