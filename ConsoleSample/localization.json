@@ -1,0 +1,10 @@
+﻿{
+  "HELLO": {
+    "en-US": "Hello",
+    "de-DE": "Hallo"
+  },
+  "SAMPLE":
+  {
+    "en-US": "Something"
+  }
+}

@@ -4,7 +4,8 @@
         <TargetFramework>netstandard2.0</TargetFramework>
         
         <!--Generate package at build-->
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+        <IsPackable>true</IsPackable>
         
         <!--Don't include generator as lib dependency-->
         <IncludeBuildOutput>false</IncludeBuildOutput>
@@ -15,6 +16,7 @@
         <RepositoryUrl>https://github.com/JBraunsmaJr/LocalizationProject</RepositoryUrl>
         <PackageTags>Localization, Localizer, Source Generator</PackageTags>
         <PackageVersion>1.0.02</PackageVersion>
+        <LangVersion>8</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -28,6 +30,6 @@
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.0.1" />
-        <PackageReference Include="System.Text.Json" Version="6.0.1" />
+        <PackageReference Include="System.Text.Json" Version="6.0.2" />
     </ItemGroup>
 </Project>
