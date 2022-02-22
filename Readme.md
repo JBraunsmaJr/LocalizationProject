@@ -107,6 +107,8 @@ var translatedText = Localizer.Get(LocalizationResource.HELLO, "en-US");
 
 ## Notes
 
+- If a translation exists for one language, but not in another - a warning will appear at build to help show what's missing. 
+
 - If you provide a `LocalizationResource` and `LocalizationLanguage`, it will default to the `CurrentCulture` for your application.
 
 Given: `var translatedText = Localizer.Get(LocalizationResource.SAMPLE, LocalizationLanguage.de_DE);`
