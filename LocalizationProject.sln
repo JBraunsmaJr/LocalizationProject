@@ -7,6 +7,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Readme.md = Readme.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{F0E7794A-DC24-4D81-8B92-896BA6F7648F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleSample", "ConsoleSample\ConsoleSample.csproj", "{BF0B43F3-68A7-48C8-9024-03DD54BCD26C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleMultiFileSample", "ConsoleMultiFileSample\ConsoleMultiFileSample.csproj", "{2E2DBE5E-9F6E-4E08-B6F1-136AF48B467D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,5 +23,17 @@ Global
 		{D0999C34-42AB-4C78-A639-A6C673833345}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0999C34-42AB-4C78-A639-A6C673833345}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0999C34-42AB-4C78-A639-A6C673833345}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF0B43F3-68A7-48C8-9024-03DD54BCD26C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF0B43F3-68A7-48C8-9024-03DD54BCD26C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF0B43F3-68A7-48C8-9024-03DD54BCD26C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF0B43F3-68A7-48C8-9024-03DD54BCD26C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E2DBE5E-9F6E-4E08-B6F1-136AF48B467D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E2DBE5E-9F6E-4E08-B6F1-136AF48B467D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E2DBE5E-9F6E-4E08-B6F1-136AF48B467D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E2DBE5E-9F6E-4E08-B6F1-136AF48B467D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BF0B43F3-68A7-48C8-9024-03DD54BCD26C} = {F0E7794A-DC24-4D81-8B92-896BA6F7648F}
+		{2E2DBE5E-9F6E-4E08-B6F1-136AF48B467D} = {F0E7794A-DC24-4D81-8B92-896BA6F7648F}
 	EndGlobalSection
 EndGlobal
