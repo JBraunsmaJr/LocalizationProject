@@ -12,10 +12,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Remove="languages\de-DE.json" />
-      <AdditionalFiles Include="languages\de-DE.json" />
-      <None Remove="languages\en-US.json" />
-      <AdditionalFiles Include="languages\en-US.json" />
+      <None Remove="languages\*.json" />
+      <AdditionalFiles Include="languages\*.json" />
     </ItemGroup>
     
 </Project>
